@@ -1,6 +1,6 @@
 #include <stdio.h>
 void main() {
-  int num1,num2,opt,flag=11;
+  int num1,num2,opt;
   char answer;
   do{
   printf("1-Addition.\n2-Substraction.\n3-Multiplication.\n4-Division.\n5-Greater.\n6-Smaller.\n7-Equality.\n8-Greater than or Equal.\n9-Square.\n10-Cube\n");
@@ -35,14 +35,16 @@ void main() {
         break;
         
       case 5: 
-      if (num1>num2){
+      if (num1>num2)
+      {
       printf("The Greater number is %d",num1);
       }
       else {printf("The Greater number is %d",num2);}
         break; 
         
      case 6:
-     if (num1<num2){
+     if (num1<num2)
+     {
       printf("The Smaller number is %d",num1);
       }
       else {printf("The Smaller number is %d",num2);}
@@ -53,7 +55,6 @@ void main() {
      if (num1==num2)
      {
      printf("The numbers are Equal");
-         
      }
      else
      {
@@ -68,8 +69,7 @@ void main() {
      } 
      else    
      {
-         printf("The Number %d is greater  than or equal to %d",num2,num1);
-         
+     printf("The Number %d is greater  than or equal to %d",num2,num1);
      }
      break;
      case 9:
