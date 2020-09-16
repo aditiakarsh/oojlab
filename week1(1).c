@@ -1,8 +1,8 @@
 #include <stdio.h>
 void main() {
-  int num1,num2,opt;
-  char answer;
-  do{
+  int num1,num2,opt,a,y=0;
+  while(y==0)
+  {
   printf("1-Addition.\n2-Substraction.\n3-Multiplication.\n4-Division.\n5-Greater.\n6-Smaller.\n7-Equality.\n8-Greater than or Equal.\n9-Square.\n10-Cube\n");
   printf("\nInput your option :\n");
   scanf("%d",&opt);
@@ -90,10 +90,16 @@ void main() {
     
     }
   
-     printf("Press Y to continue.\n");
-     scanf(" %c",&answer); 
+     printf("Press 1 to continue and 0 to exit.\n");
+     scanf(" %d",&a); 
+  if(a==0)
+  {
+     y=1;
   }
-  while(answer == 'y' || answer == 'Y');
+  else if(a==1)
+   {
+      y=0;
+   }
    
-    
+ }
 }
