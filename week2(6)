@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include<math.h>
+void main ()
+{
+      float area,volume,h,rad;
+      int choice,y=0,a;
+      while(y==0)
+     {
+      printf("1 for area and volume of cylinder\n");
+      printf("2 for area and volume of cone\n");
+      printf("3 for area and volume of sphere\n");
+      printf("Input your choice : ");
+      scanf("%d",&choice);
+      switch(choice)
+      {
+           case 1:
+                 printf("Enter radius and height : ");
+                 scanf("%f",&rad);
+                 scanf("%f",&h);
+                 area=2*3.14*rad*(rad+h);
+                 volume=3.14*rad*rad*h;
+                 break;
+            case 2:
+                 printf("Enter radius and height : ");
+                 scanf("%f",&rad);
+                 scanf("%f",&h);
+                 volume=(3.14*rad*rad*h)/3;
+                 area=(22 / 7) * rad * (rad + sqrt(rad * rad + h * h));
+                 break;
+                  
+            case 3:
+                 printf("Enter radius and height : ");
+                 scanf("%f",&rad);
+                 scanf("%f",&h);
+                 volume=(4*3.14*rad*rad*rad)/3;
+                 area=4*3.14*rad*rad;
+                 break;
+            
+            default:
+                printf("option not available\n");
+                break;
+      }
+                  
+          printf("The area is : %f\n",area);
+          printf("The volume is : %f\n",volume);
+
+printf("\n Enter 0 to exit and 1 to continue\n");
+         scanf("%d",&a);
+         if(a==0)
+         {
+             y=1;
+         }
+         else if(a==1)
+         {
+             y=0;
+         }
+}
+}
