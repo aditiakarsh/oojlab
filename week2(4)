@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main(void){
+int main(){
 int cie,see,num;
 printf("Enter your CIE mark ");
 scanf("%d",&cie);
