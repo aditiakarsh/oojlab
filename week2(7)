@@ -22,135 +22,140 @@ for(int i=0;i<n;i++)
     {
         case 1:
         p=p+1;
-        elect="IoT";
+        elect='IoT';
         break;
         
         case 2:
         q=q+1;
-        elect="Advanced java";
+        elect='Advanced java';
         break;
         
         case 3:
         r=r+1;
-        elect="Advanced DS";
+        elect='Advanced DS';
         break;
         
           }
 }
-printf("Number of students in IoT is %d",p);
-printf("Number of students in Advanced java and J2EE is %d",q);
-printf("Number of students in Advanced data structures is%d",r);
+printf("Number of students in IoT is %d\n",p);
+printf("Number of students in Advanced java and J2EE is %d\n",q);
+printf("Number of students in Advanced data structures is%d\n",r);
 
-if(elect=="IoT")
+
+for (int i = 0; i < n; i++)
+
+{
+    if(elect=='IoT')
   {  
-      for(int i=0;i<=p;i++)
-  {
-    printf("First name: ");
-   puts(s[i].name);
+  
+    printf("First name:%s",s[i].name);
+
 }
-}
-else if(elect=="Advanced java")
-  {  for(int i=0;i<=q;i++)
-  {
-      printf("First name: ");
-     puts(s[i].name);
+else if(elect=='Advanced java')
+  {  
+  
+      printf("First name:%s",s[i].name);
+   
    }
-   }
-else if(elect=="Advanced DS")
-  {  for(int i=0;i<=p;i++)
-    {
-       printf("First name: ");
-       puts(s[i].name);
-    }
+else if(elect=='Advanced DS')
+  {  
+    
+       printf("First name:%s",s[i].name);
+    
   }
 
-
-if (p<=30)
+}
+if (p<=3)
 { 
-    printf("IoT course will not be floated");
-    printf("Enter 1 for Advanced java and 2 for Advanced data Structures");
-     for(int j=0;j<q;j++)
+    printf("IoT course will not be floated\n");
+    if(p!=0)
+    printf("Enter 1 for Advanced java and 2 for Advanced data Structures\n");
+     for(int j=0;j<p;j++)
   { scanf("%d",&a);
    printf("Enter first name: ");
    scanf("%s",s[j].name);
     if(a==1)
     {  q++;
-      elect="Advanced java";
+      elect='Advanced java';
       p--;
     }
     else
      { r++;
      p--;
-    elect="Advanced DS";
+    elect='Advanced DS';
 }}
 }
-if (q<=30)
+if (q<=3)
 { 
-    printf("Advanced java course will not be floated");
-    printf("Enter 1 IoT and 2 for Advanced data Structures");
+    printf("Advanced java course will not be floated\n");
+    if(q!=0)
+    printf("Enter 1 IoT and 2 for Advanced data Structures\n");
     for(int k=0;k<q;k++)
     {scanf("%d",&a);
      printf("Enter first name: ");
    scanf("%s", s[k].name);
     if(a==1)
      { p++;
-     elect="IoT";
+     elect='IoT';
       q--;}
      else
       {r++;
-      elect="Advanced DS";
+      elect='Advanced DS';
       q--;
 }}
     
 }
 
-if (r<=30)
+if (r<=3)
 { 
-    printf("Advanced data structures course will not be floated");
+    printf("Advanced data structures course will not be floated\n");
+    if(r!=0)
     printf("enter 1 for IoT and 2 for Advanced java");
-     for(int l=0;l<q;l++)
+     for(int l=0;l<r;l++)
    { scanf("%d",&a);
    printf("Enter first name: ");
    scanf("%s", s[l].name);
     if(a==1)
      {p ++;
-     elect="IoT";
+     elect='IoT';
      r--;
      }
     else
      { q++;
-      elect="Advanced java";
+      elect='Advanced java';
       r--;
 }
    }
 }
-printf("After re selection");
-printf("Number of students in IoT is %d",p);
-printf("Number of students in Advanced java and J2EE is %d",q);
-printf("Number of students in Advanced data structures is%d",r);
+printf("After re selection\n");
+printf("Number of students in IoT is %d\n",p);
+printf("Number of students in Advanced java and J2EE is %d\n",q);
+printf("Number of students in Advanced data structures is%d\n",r);
 
-
-if(elect=="IoT")
+for (int i = 0; i < n; i++)
+{
+{
+if(elect=='IoT')
   {  
-      for(int i=0;i<=p;i++)
-  {
-    printf("First name: ");
-   puts(s[i].name);
-}
-}
-else if(elect=="Advanced java")
-  {  for(int i=0;i<=q;i++)
-  {
-      printf("First name: ");
-     puts(s[i].name);
-   }
-   }
-else if(elect=="Advanced DS")
-  {  for(int i=0;i<=p;i++)
-    {
-       printf("First name: ");
-       puts(s[i].name);
-    }
-  }
+    printf("Students in IoT\n");
+    printf("First name: %s",s[i].name);
 
 }
+else if(elect=='Advanced java')
+  {  
+      printf("Students in Advanced java\n");
+  
+      printf("First name: %s",s[i].name);
+   
+   }
+else if(elect=='Advanced DS')
+  {
+       printf("Students in Advanced DS\n");
+       printf("First name: %s",s[i].name);
+    
+  }
+}
+}
+
+}
+
