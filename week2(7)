@@ -41,6 +41,29 @@ printf("Number of students in IoT is %d",p);
 printf("Number of students in Advanced java and J2EE is %d",q);
 printf("Number of students in Advanced data structures is%d",r);
 
+if(elect=="IoT")
+  {  
+      for(int i=0;i<=p;i++)
+  {
+    printf("First name: ");
+   puts(s[i].name);
+}
+}
+else if(elect=="Advanced java")
+  {  for(int i=0;i<=q;i++)
+  {
+      printf("First name: ");
+     puts(s[i].name);
+   }
+   }
+else if(elect=="Advanced DS")
+  {  for(int i=0;i<=p;i++)
+    {
+       printf("First name: ");
+       puts(s[i].name);
+    }
+  }
+
 
 if (p<=30)
 { 
