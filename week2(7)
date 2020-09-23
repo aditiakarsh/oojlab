@@ -1,0 +1,133 @@
+#include<stdio.h>
+struct student
+{
+    char name[50],elect;
+    
+}s[100];
+int main()
+{
+int n,p=0,q=0,r=0,ch,a; 
+char elect;
+ printf("Enter the number of students");
+    scanf("%d",&n);
+
+for(int i=0;i<n;i++)
+{ 
+    printf("Enter first name: ");
+    scanf("%s", s[i].name);
+    printf("Choose elective\n");
+    printf("1.IoT\n2.Advanced java and J2EE\n3.Advanced Data Structures\n");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+        case 1:
+        p=p+1;
+        elect="IoT";
+        break;
+        
+        case 2:
+        q=q+1;
+        elect="Advanced java";
+        break;
+        
+        case 3:
+        r=r+1;
+        elect="Advanced DS";
+        break;
+        
+          }
+}
+printf("Number of students in IoT is %d",p);
+printf("Number of students in Advanced java and J2EE is %d",q);
+printf("Number of students in Advanced data structures is%d",r);
+
+
+if (p<=30)
+{ 
+    printf("IoT course will not be floated");
+    printf("Enter 1 for Advanced java and 2 for Advanced data Structures");
+     for(int j=0;j<q;j++)
+  { scanf("%d",&a);
+   printf("Enter first name: ");
+   scanf("%s",s[j].name);
+    if(a==1)
+    {  q++;
+      elect="Advanced java";
+      p--;
+    }
+    else
+     { r++;
+     p--;
+    elect="Advanced DS";
+}}
+}
+if (q<=30)
+{ 
+    printf("Advanced java course will not be floated");
+    printf("Enter 1 IoT and 2 for Advanced data Structures");
+    for(int k=0;k<q;k++)
+    {scanf("%d",&a);
+     printf("Enter first name: ");
+   scanf("%s", s[k].name);
+    if(a==1)
+     { p++;
+     elect="IoT";
+      q--;}
+     else
+      {r++;
+      elect="Advanced DS";
+      q--;
+}}
+    
+}
+
+if (r<=30)
+{ 
+    printf("Advanced data structures course will not be floated");
+    printf("enter 1 for IoT and 2 for Advanced java");
+     for(int l=0;l<q;l++)
+   { scanf("%d",&a);
+   printf("Enter first name: ");
+   scanf("%s", s[l].name);
+    if(a==1)
+     {p ++;
+     elect="IoT";
+     r--;
+     }
+    else
+     { q++;
+      elect="Advanced java";
+      r--;
+}
+   }
+}
+printf("After re selection");
+printf("Number of students in IoT is %d",p);
+printf("Number of students in Advanced java and J2EE is %d",q);
+printf("Number of students in Advanced data structures is%d",r);
+
+
+if(elect=="IoT")
+  {  
+      for(int i=0;i<=p;i++)
+  {
+    printf("First name: ");
+   puts(s[i].name);
+}
+}
+else if(elect=="Advanced java")
+  {  for(int i=0;i<=q;i++)
+  {
+      printf("First name: ");
+     puts(s[i].name);
+   }
+   }
+else if(elect=="Advanced DS")
+  {  for(int i=0;i<=p;i++)
+    {
+       printf("First name: ");
+       puts(s[i].name);
+    }
+  }
+
+}
