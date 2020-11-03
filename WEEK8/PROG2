@@ -86,7 +86,7 @@ class sav_acct extends Account{
     void intrest(double amount){
      int time = 3, n=1;
      System.out.println("Rate of intrest is 0.2");
-     this.balance = this.balance*Math.pow(1+(0.2)/n, (nt));
+     this.balance = this.balance*Math.pow(1+(0.2)/n, (n*time));
     }
 }
 
